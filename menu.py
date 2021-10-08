@@ -62,3 +62,7 @@ while True:
             print("you ate jerky!")
         elif user_input3.lower() == "health potion":
             print("you drank health potion!")
+    elif user_input.lower() == "leave":
+            quit_option = input("Would you like to leave (yes) ")
+            if quit_option == "yes":
+                sys.exit()
