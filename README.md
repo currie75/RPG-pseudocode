@@ -1,2 +1,2 @@
-# RPG-pseudocode
+#pseudocode
 pseudocode
