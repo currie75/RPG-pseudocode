@@ -4,6 +4,8 @@
 # Ethan currie
 # This is text-base adventure game
 import sys
+import inventory as inv
+import characters as charc
 
 # Welcome message
 print("Welcome to the dark forest of bloodhornbog")
@@ -62,6 +64,10 @@ while True:
             print("you ate jerky!")
         elif user_input3.lower() == "health potion":
             print("you drank health potion!")
+    elif user_input.lower() == "inventory":
+      inv.inventory_print()
+    elif user_input.lower() == "character":
+      charc.character_print()
     elif user_input.lower() == "leave":
             quit_option = input("Would you like to leave (yes) ")
             if quit_option == "yes":
