@@ -12,7 +12,6 @@ character_options = {
             {"description": " has the ability to explore any where"
                 "+ 5 damage and + 15 defense "}
             }
-
 # this is the charcter is called in to menu
 def character_print():
   for character in character_options:
