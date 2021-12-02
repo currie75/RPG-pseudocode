@@ -3,9 +3,15 @@
 # October/4th/2021
 # Ethan currie
 # This is text-base adventure game
-import sys
-import inventory as inv
-import characters as charc
+try:
+    import sys
+    import inventory as inv
+    import characters as charc
+    import locations as loca
+except ModuleNotFoundError:
+    print("Error on import")
+    print("GAME END")
+    sys.exit()
 
 # Welcome message
 print("Welcome to the dark forest of bloodhornbog")
@@ -13,11 +19,12 @@ print("Welcome to the dark forest of bloodhornbog")
 print("Traveler what is your name")
 name = input()
 # General actions for the game
-actions = ["follow signs", "attack", "heal", "inventory", "leave", " "]
+actions = ["follow signs", "attack", "heal", "inventory", "leave","character", "locations", " "]
 # Possible actions for the game
 possible_direction_actions = ["east", "west", "south", "north", " "]
 attack_actions = ["stab ", "shoot ", "punch "]
 heal_actions = ["eat mushroom", "eat chicken", "health potion", " "]
+character_actions =["Adventurer", "Explorer", " "]
 
 # While true loop for the story
 while True:
@@ -65,9 +72,11 @@ while True:
         elif user_input3.lower() == "health potion":
             print("you drank health potion!")
     elif user_input.lower() == "inventory":
-      inv.inventory_print()
+        inv.inventory_print()
     elif user_input.lower() == "character":
-      charc.character_print()
+        charc.character_print()
+    elif user_input.lower() == "locations":
+        loca.locations_print()
     elif user_input.lower() == "leave":
             quit_option = input("Would you like to leave (yes) ")
             if quit_option == "yes":
